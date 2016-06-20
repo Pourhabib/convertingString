@@ -21,10 +21,11 @@ func findApt (aptNumber: String) -> String? {
 
 
 if let culprit = findApt("404") {
-    if let aptNumber = culprit.Int() {
-        sendNoticeTo(aptNumber: aptnumber)
+    if let aptNumber = Int(culprit) {
+        sendNoticeTo(aptNumber: aptNumber)
+        print(aptNumber, terminator: "")
+        print(aptNumber.dynamicType, terminator: "")
+        
     }
-    
-    
 }
 
